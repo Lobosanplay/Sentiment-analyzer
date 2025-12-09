@@ -10,8 +10,9 @@ El objetivo es clasificar reseñas de películas como positivas o negativas util
 ## 📁 Estructura del Proyecto
 ```text
 📦src
- ┣ 📂data
- ┃ ┗ 📜BBDD.xlsx (Aca puedes guardar tu Dataset par probar)
+ ┣ 📂data (Aca puedes guardar tu Dataset par probar)
+ ┃ ┗ 📜BBDD.xlsx
+ ┃ ┗ 📜sentiment_analysis.csv 
  ┣ 📂pysentiment
  ┃ ┗ 📜sentiment_analyzer_with_pysentiment.py    # Enfoque basado en diccionario
  ┗ 📂scikit-learn
@@ -19,12 +20,31 @@ El objetivo es clasificar reseñas de películas como positivas o negativas util
 ```
 
 ## 📊 Dataset
+Si quieres encontrar Datasets para tus pruebas puedes buscar por [kaggle](https://www.kaggle.com/)
 El dataset debe contener columnas con estos nombres para su funcionamiento:
 
+Dataset de BBDD.xlsx:
+Este dataset cuenta con 50000 rows
+Las columnas mas importantes son: **sentimiento**, **review_es** (Porque son valores que estan en español pero **review_es y sentiment** Tambien funcionan)
+
+Columnas:
 - review_en: Reseña en inglés
 - review_es: Reseña en español
 - sentiment: Etiqueta de sentimiento en inglés (positive/negative)
 - sentimiento: Etiqueta de sentimiento en español (positivo/negativo)
+
+Dataset de sentiment_analysis.csv:
+Este dataset solo cuenta con 500 rows (Se planea cambiarlo por una mas grande al futuro).
+Las columnas mas importantes son: **text**, **sentiment**
+
+Columnas:
+- Year: Año de publicacion
+- Month: Mes de publicacion
+- Day: Dia de publicacion
+- Time of Tweet: Tiempo desde la publicacion del tweet
+- text: Contenio del tweet
+- sentiment: Sentimiento que refleja el tweet (positive/negative/neutral)
+- Platform: En que plataforma se hizo el tweet
 
 ## 🛠️ Requisitos
 ```txt
